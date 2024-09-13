@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "723400451890",
+    "project_id": "ohms-b49d6",
+    "storage_bucket": "ohms-b49d6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:723400451890:android:a30eeec616a7814f27592b",
+        "android_client_info": {
+          "package_name": "com.ohms90.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9r1TNeLOR8qO3NAg2CVVbQACW5aBgxc8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
