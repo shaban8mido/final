@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart'; // Add Material package for logout functionality
+// Add Material package for logout functionality
 import 'package:firebase_auth/firebase_auth.dart'; // Import Firebase Auth
 import 'shoe_item.dart';
 import 'shoe_tile.dart';

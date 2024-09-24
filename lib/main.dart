@@ -13,18 +13,20 @@ void main() async {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return CupertinoApp(
       debugShowCheckedModeBanner: false,
       title: 'Shoe Store App',
-      theme: CupertinoThemeData(
+      theme: const CupertinoThemeData(
         primaryColor: CupertinoColors.activeBlue,
       ),
       initialRoute: '/',
       routes: {
         '/': (context) => LoginPage(),
-        '/shoeApp': (context) => ShoeApp(), // Your shoe app main page
+        '/shoeApp': (context) => const ShoeApp(), // Your shoe app main page
         '/signup': (context) => SignUpPage(), // Route for Sign Up page
         '/resetPassword': (context) => ResetPasswordPage(), // Route for Reset Password page
       },

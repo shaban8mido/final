@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'auth_service.dart'; // Import your AuthService
 
 class SignUpPage extends StatefulWidget {
+  const SignUpPage({super.key});
+
   @override
   _SignUpPageState createState() => _SignUpPageState();
 }
@@ -17,11 +19,11 @@ class _SignUpPageState extends State<SignUpPage> {
       showCupertinoDialog(
         context: context,
         builder: (context) => CupertinoAlertDialog(
-          title: Text('Error'),
-          content: Text('Passwords do not match'),
+          title: const Text('Error'),
+          content: const Text('Passwords do not match'),
           actions: [
             CupertinoDialogAction(
-              child: Text('OK'),
+              child: const Text('OK'),
               onPressed: () => Navigator.pop(context),
             ),
           ],
@@ -43,11 +45,11 @@ class _SignUpPageState extends State<SignUpPage> {
       showCupertinoDialog(
         context: context,
         builder: (context) => CupertinoAlertDialog(
-          title: Text('Sign Up Failed'),
-          content: Text('Please try again.'),
+          title: const Text('Sign Up Failed'),
+          content: const Text('Please try again.'),
           actions: [
             CupertinoDialogAction(
-              child: Text('OK'),
+              child: const Text('OK'),
               onPressed: () => Navigator.pop(context),
             ),
           ],
@@ -59,7 +61,7 @@ class _SignUpPageState extends State<SignUpPage> {
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
-      navigationBar: CupertinoNavigationBar(
+      navigationBar: const CupertinoNavigationBar(
         middle: Text('Sign Up'),
       ),
       child: SafeArea(
@@ -71,38 +73,38 @@ class _SignUpPageState extends State<SignUpPage> {
               CupertinoTextField(
                 controller: _emailController,
                 placeholder: 'Email',
-                padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
                 decoration: BoxDecoration(
                   border: Border.all(color: CupertinoColors.systemGrey),
                   borderRadius: BorderRadius.circular(8),
                 ),
               ),
-              SizedBox(height: 12),
+              const SizedBox(height: 12),
               CupertinoTextField(
                 controller: _passwordController,
                 placeholder: 'Password',
                 obscureText: true,
-                padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
                 decoration: BoxDecoration(
                   border: Border.all(color: CupertinoColors.systemGrey),
                   borderRadius: BorderRadius.circular(8),
                 ),
               ),
-              SizedBox(height: 12),
+              const SizedBox(height: 12),
               CupertinoTextField(
                 controller: _repeatPasswordController,
                 placeholder: 'Repeat Password',
                 obscureText: true,
-                padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
                 decoration: BoxDecoration(
                   border: Border.all(color: CupertinoColors.systemGrey),
                   borderRadius: BorderRadius.circular(8),
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               CupertinoButton.filled(
-                child: Text('Sign Up'),
                 onPressed: _signUp,
+                child: Text('Sign Up'),
               ),
             ],
           ),

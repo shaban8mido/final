@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'auth_service.dart'; // Import your AuthService
 
 class ResetPasswordPage extends StatefulWidget {
+  const ResetPasswordPage({super.key});
+
   @override
   _ResetPasswordPageState createState() => _ResetPasswordPageState();
 }
@@ -14,11 +16,11 @@ class _ResetPasswordPageState extends State<ResetPasswordPage> {
     showCupertinoDialog(
       context: context,
       builder: (context) => CupertinoAlertDialog(
-        title: Text('Reset Password'),
-        content: Text('If the email is registered, a reset link has been sent.'),
+        title: const Text('Reset Password'),
+        content: const Text('If the email is registered, a reset link has been sent.'),
         actions: [
           CupertinoDialogAction(
-            child: Text('OK'),
+            child: const Text('OK'),
             onPressed: () => Navigator.pop(context),
           ),
         ],
@@ -29,7 +31,7 @@ class _ResetPasswordPageState extends State<ResetPasswordPage> {
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
-      navigationBar: CupertinoNavigationBar(
+      navigationBar: const CupertinoNavigationBar(
         middle: Text('Reset Password'),
       ),
       child: SafeArea(
@@ -41,16 +43,16 @@ class _ResetPasswordPageState extends State<ResetPasswordPage> {
               CupertinoTextField(
                 controller: _emailController,
                 placeholder: 'Email',
-                padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
                 decoration: BoxDecoration(
                   border: Border.all(color: CupertinoColors.systemGrey),
                   borderRadius: BorderRadius.circular(8),
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               CupertinoButton.filled(
-                child: Text('Send Reset Link'),
                 onPressed: _resetPassword,
+                child: Text('Send Reset Link'),
               ),
             ],
           ),

@@ -5,6 +5,8 @@ import 'signup_page.dart'; // Import the Sign Up page
 import 'reset_password_page.dart'; // Import the Reset Password page
 
 class LoginPage extends StatefulWidget {
+  const LoginPage({super.key});
+
   @override
   _LoginPageState createState() => _LoginPageState();
 }
@@ -27,11 +29,11 @@ class _LoginPageState extends State<LoginPage> {
       showCupertinoDialog(
         context: context,
         builder: (context) => CupertinoAlertDialog(
-          title: Text('Login Failed'),
-          content: Text('Invalid email or password'),
+          title: const Text('Login Failed'),
+          content: const Text('Invalid email or password'),
           actions: [
             CupertinoDialogAction(
-              child: Text('OK'),
+              child: const Text('OK'),
               onPressed: () => Navigator.pop(context),
             ),
           ],
@@ -43,7 +45,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
-      navigationBar: CupertinoNavigationBar(
+      navigationBar: const CupertinoNavigationBar(
         middle: Text('Login'),
       ),
       child: SafeArea(
@@ -53,35 +55,35 @@ class _LoginPageState extends State<LoginPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset('assets/logo.png'), // Your logo image
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               CupertinoTextField(
                 controller: _emailController,
                 placeholder: 'Email',
-                padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
                 decoration: BoxDecoration(
                   border: Border.all(color: CupertinoColors.systemGrey),
                   borderRadius: BorderRadius.circular(8),
                 ),
               ),
-              SizedBox(height: 12),
+              const SizedBox(height: 12),
               CupertinoTextField(
                 controller: _passwordController,
                 placeholder: 'Password',
                 obscureText: true,
-                padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
                 decoration: BoxDecoration(
                   border: Border.all(color: CupertinoColors.systemGrey),
                   borderRadius: BorderRadius.circular(8),
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               CupertinoButton.filled(
-                child: Text('Login'),
                 onPressed: _login,
+                child: Text('Login'),
               ),
-              SizedBox(height: 12),
+              const SizedBox(height: 12),
               CupertinoButton(
-                child: Text('Sign Up'),
+                child: const Text('Sign Up'),
                 onPressed: () {
                   Navigator.push(
                     context,
@@ -89,9 +91,9 @@ class _LoginPageState extends State<LoginPage> {
                   );
                 },
               ),
-              SizedBox(height: 12),
+              const SizedBox(height: 12),
               CupertinoButton(
-                child: Text('Reset Password'),
+                child: const Text('Reset Password'),
                 onPressed: () {
                   Navigator.push(
                     context,
