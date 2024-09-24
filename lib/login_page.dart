@@ -79,7 +79,7 @@ class _LoginPageState extends State<LoginPage> {
               const SizedBox(height: 20),
               CupertinoButton.filled(
                 onPressed: _login,
-                child: Text('Login'),
+                child: const Text('Login'),
               ),
               const SizedBox(height: 12),
               CupertinoButton(
@@ -87,7 +87,7 @@ class _LoginPageState extends State<LoginPage> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    CupertinoPageRoute(builder: (context) => SignUpPage()),
+                    CupertinoPageRoute(builder: (context) => const SignUpPage()),
                   );
                 },
               ),
@@ -97,7 +97,7 @@ class _LoginPageState extends State<LoginPage> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    CupertinoPageRoute(builder: (context) => ResetPasswordPage()),
+                    CupertinoPageRoute(builder: (context) => const ResetPasswordPage()),
                   );
                 },
               ),

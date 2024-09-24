@@ -104,7 +104,7 @@ class _SignUpPageState extends State<SignUpPage> {
               const SizedBox(height: 20),
               CupertinoButton.filled(
                 onPressed: _signUp,
-                child: Text('Sign Up'),
+                child: const Text('Sign Up'),
               ),
             ],
           ),

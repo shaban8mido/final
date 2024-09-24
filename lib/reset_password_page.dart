@@ -52,7 +52,7 @@ class _ResetPasswordPageState extends State<ResetPasswordPage> {
               const SizedBox(height: 20),
               CupertinoButton.filled(
                 onPressed: _resetPassword,
-                child: Text('Send Reset Link'),
+                child: const Text('Send Reset Link'),
               ),
             ],
           ),

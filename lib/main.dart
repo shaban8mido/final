@@ -9,7 +9,7 @@ import 'firebase_options.dart'; // Import your Firebase options
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform); // Initialize Firebase
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -25,10 +25,10 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: {
-        '/': (context) => LoginPage(),
+        '/': (context) => const LoginPage(),
         '/shoeApp': (context) => const ShoeApp(), // Your shoe app main page
-        '/signup': (context) => SignUpPage(), // Route for Sign Up page
-        '/resetPassword': (context) => ResetPasswordPage(), // Route for Reset Password page
+        '/signup': (context) => const SignUpPage(), // Route for Sign Up page
+        '/resetPassword': (context) => const ResetPasswordPage(), // Route for Reset Password page
       },
     );
   }
